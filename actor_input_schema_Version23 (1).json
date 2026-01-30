@@ -1,0 +1,36 @@
+{
+  "title": "Input schema of the ESG Report Extractor scraper",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "startUrls": {
+      "title": "Start URLs",
+      "type": "array",
+      "description": "Seed URLs to start crawling from (company pages, investor relations pages, sustainability sections, directories).",
+      "editor": "requestListSources",
+      "prefill": [
+        {
+          "url": "https://example.com"
+        }
+      ]
+    },
+    "maxRequestsPerCrawl": {
+      "title": "Max Requests per Crawl",
+      "type": "integer",
+      "description": "Maximum number of requests the crawler will perform.",
+      "default": 200
+    },
+    "detectPdfLinks": {
+      "title": "Detect PDF links",
+      "type": "boolean",
+      "description": "Detect and include links to PDF reports (true = include).",
+      "default": true
+    },
+    "followInternalOnly": {
+      "title": "Follow internal links only",
+      "type": "boolean",
+      "description": "If true, only follow links within the same host as each start URL.",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "actorSpecification": 1,
+  "fields": {},
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": ["company", "title", "date", "pdf_url", "exec_summary", "tags", "url"]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "company": { "label": "Company", "format": "text" },
+          "title": { "label": "Report title", "format": "text" },
+          "date": { "label": "Publication date", "format": "text" },
+          "pdf_url": { "label": "PDF URL", "format": "link" },
+          "exec_summary": { "label": "Executive summary (trimmed)", "format": "text" },
+          "tags": { "label": "Tags", "format": "text" },
+          "url": { "label": "Source URL", "format": "link" }
+        }
+      }
+    }
+  }
+}
